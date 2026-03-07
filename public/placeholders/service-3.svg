@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDE6DB" />
+      <stop offset="1" stop-color="#B8C9BC" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="48" fill="url(#g)"/>
+  <circle cx="220" cy="210" r="150" fill="white" fill-opacity="0.24"/>
+  <circle cx="980" cy="680" r="220" fill="#A18669" fill-opacity="0.16"/>
+  <rect x="236" y="388" width="728" height="126" rx="63" fill="white" fill-opacity="0.55"/>
+  <text x="600" y="462" text-anchor="middle" fill="#546257" font-family="Manrope, sans-serif" font-size="46" font-weight="600">[Service Placeholder]</text>
+</svg>

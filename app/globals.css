@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 35% 96%;
+  --foreground: 142 12% 15%;
+  --card: 36 34% 97%;
+  --card-foreground: 142 12% 18%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 142 10% 18%;
+  --primary: 137 16% 42%;
+  --primary-foreground: 48 22% 97%;
+  --secondary: 40 28% 91%;
+  --secondary-foreground: 141 12% 22%;
+  --muted: 36 26% 92%;
+  --muted-foreground: 143 8% 38%;
+  --accent: 20 44% 58%;
+  --accent-foreground: 43 33% 96%;
+  --border: 42 20% 84%;
+  --input: 42 20% 84%;
+  --ring: 137 18% 45%;
+  --radius: 1.15rem;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at 2% 12%, rgba(133, 150, 130, 0.16), transparent 28%),
+    radial-gradient(circle at 96% 84%, rgba(192, 143, 120, 0.14), transparent 30%);
+}
+
+a {
+  @apply transition-colors;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.24s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.24s ease-out;
+}
