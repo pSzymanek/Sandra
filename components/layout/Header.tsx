@@ -51,7 +51,7 @@ export function Header() {
         <Sheet>
           <SheetTrigger asChild>
             <button
-              aria-label="Otworz menu"
+              aria-label="Otwórz menu"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/70 bg-background lg:hidden"
             >
               <Menu className="h-5 w-5" />
@@ -59,7 +59,10 @@ export function Header() {
           </SheetTrigger>
           <SheetContent className="rounded-l-3xl border-white/50 bg-transparent bg-gradient-to-b from-white/66 via-white/52 to-white/36 shadow-[0_24px_64px_-28px_rgba(15,23,42,0.35)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:from-white/60 supports-[backdrop-filter]:via-white/46 supports-[backdrop-filter]:to-white/30">
             <SheetHeader>
-              <SheetTitle className="text-foreground">Psychoterapia Sandra Anczarska</SheetTitle>
+              <SheetTitle className="text-foreground">
+                <span className="block">Psychoterapia</span>
+                <span className="block whitespace-nowrap">Sandra Anczarska</span>
+              </SheetTitle>
               <SheetDescription className="text-foreground/55">[Nawigacja mobilna]</SheetDescription>
             </SheetHeader>
             <nav className="mt-10 flex flex-col gap-6">

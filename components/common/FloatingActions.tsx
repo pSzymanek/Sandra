@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Link2, Music2, Phone } from "lucide-react";
+import { ArrowUp, Facebook, Instagram, Link2, Music2, Phone } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -35,6 +35,22 @@ function CircleButton({
     >
       {children}
     </a>
+  );
+}
+
+function ScrollTopButton({ className }: { className?: string }) {
+  return (
+    <button
+      type="button"
+      aria-label="Przewin do gory"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className={cn(
+        "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5",
+        className,
+      )}
+    >
+      <ArrowUp className="h-6 w-6" />
+    </button>
   );
 }
 
@@ -83,10 +99,30 @@ export function FloatingActions() {
         className="pointer-events-none fixed bottom-4 right-3 z-30 lg:hidden"
         style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto flex flex-col gap-2.5">
+          <motion.div
+            initial={false}
+            animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 10 }}
+            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            className={cn(showSocials ? "pointer-events-auto" : "pointer-events-none")}
+          >
+            <ScrollTopButton className="h-14 w-14 border-white/45 bg-[#2f4350]" />
+          </motion.div>
+
           <CircleButton label="Telefon" href="#" className="h-16 w-16 border-white/45 bg-[#6f8879]">
             <Phone className="h-7 w-7" />
           </CircleButton>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={false}
+        animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 14, x: showSocials ? 0 : 8 }}
+        transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
+        className="pointer-events-none fixed bottom-4 right-5 z-30 hidden lg:block"
+      >
+        <div className={cn(showSocials ? "pointer-events-auto" : "pointer-events-none")}>
+          <ScrollTopButton className="border-white/40 bg-[#2f4350]" />
         </div>
       </motion.div>
     </>

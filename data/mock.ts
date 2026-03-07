@@ -1,7 +1,7 @@
 export const navItems = [
   { label: "Oferta", href: "#oferta" },
   { label: "O mnie", href: "#o-mnie" },
-  { label: "Zespol", href: "#zespol" },
+  { label: "Zespół", href: "#zespol" },
   { label: "Opinie", href: "#opinie" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -67,7 +67,7 @@ export const aboutData = {
 
 export const teamData = {
   eyebrow: "[Naglowek sekcji]",
-  title: "[Zespol]",
+  title: "[Zespół]",
   description: "[Krotki opis sekcji]",
   members: [
     {
