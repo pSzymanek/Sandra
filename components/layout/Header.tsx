@@ -40,7 +40,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button variant="terracotta">[Umow wizyte]</Button>
+          <Button variant="terracotta">[Widget znany lekarz]</Button>
         </div>
 
         <Sheet>
@@ -52,23 +52,23 @@ export function Header() {
               <Menu className="h-5 w-5" />
             </button>
           </SheetTrigger>
-          <SheetContent className="border-border/70 bg-background/96">
+          <SheetContent className="rounded-l-3xl border-white/50 bg-transparent bg-gradient-to-b from-white/66 via-white/52 to-white/36 shadow-[0_24px_64px_-28px_rgba(15,23,42,0.35)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:from-white/60 supports-[backdrop-filter]:via-white/46 supports-[backdrop-filter]:to-white/30">
             <SheetHeader>
-              <SheetTitle>Psychoterapia Sandra Anczarska</SheetTitle>
-              <SheetDescription>[Nawigacja mobilna]</SheetDescription>
+              <SheetTitle className="text-foreground">Psychoterapia Sandra Anczarska</SheetTitle>
+              <SheetDescription className="text-foreground/55">[Nawigacja mobilna]</SheetDescription>
             </SheetHeader>
             <nav className="mt-10 flex flex-col gap-6">
               {navItems.map((item) => (
                 <SheetClose asChild key={item.href}>
-                  <Link href={item.href} className="text-lg font-medium text-foreground/85">
+                  <Link href={item.href} className="text-[2rem] font-display leading-none text-foreground">
                     {item.label}
                   </Link>
                 </SheetClose>
               ))}
             </nav>
             <SheetClose asChild>
-              <Button variant="terracotta" className="mt-10 w-full">
-                [Umow wizyte]
+              <Button variant="terracotta" className="mt-10 h-14 w-full rounded-2xl text-xl font-display font-normal">
+                [Widget znany lekarz]
               </Button>
             </SheetClose>
           </SheetContent>

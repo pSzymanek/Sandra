@@ -15,13 +15,13 @@ const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Overlay
-    ref={ref}
-    className={cn(
-      "fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition-opacity duration-300 data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
-      className,
-    )}
-    {...props}
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/16 backdrop-blur-[1px] transition-opacity duration-300 data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+        className,
+      )}
+      {...props}
   />
 ));
 SheetOverlay.displayName = DialogPrimitive.Overlay.displayName;
@@ -52,7 +52,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-1 text-muted-foreground transition-opacity hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-ring">
+      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-1 text-foreground/70 transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring">
         <X className="h-4 w-4" />
         <span className="sr-only">Zamknij</span>
       </DialogPrimitive.Close>

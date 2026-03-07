@@ -10,7 +10,7 @@ export const heroData = {
   eyebrow: "[Lokalizacja / kategoria]",
   title: "[Glowny naglowek strony]",
   description: "[Krotki opis gabinetu]",
-  primaryCta: "[Przycisk glowny]",
+  primaryCta: "[Widget znany lekarz]",
   secondaryCta: "[Przycisk dodatkowy]",
   image: "/placeholders/hero-placeholder.svg",
 };
@@ -50,7 +50,7 @@ export const whyChooseData = {
   description: "[Krotki opis]",
   image: "/placeholders/why-placeholder.svg",
   benefits: ["[Benefit 1]", "[Benefit 2]", "[Benefit 3]", "[Benefit 4]"],
-  cta: "[Przycisk glowny]",
+  cta: "[Widget znany lekarz]",
   phone: "[Telefon]",
 };
 

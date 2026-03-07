@@ -9,13 +9,13 @@ import { heroData } from "@/data/mock";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden py-8 md:py-16 lg:min-h-[calc(100vh-6rem)] lg:py-14">
-      <div className="container lg:hidden">
+    <section id="top" className="relative overflow-hidden pb-8 pt-0 md:py-16 lg:min-h-[calc(100vh-6rem)] lg:py-14">
+      <div className="lg:hidden">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-h-[39rem] overflow-hidden rounded-[2rem] border border-border/70 bg-secondary/65 shadow-panel"
+          className="relative min-h-[39rem] w-full overflow-hidden bg-secondary/65"
         >
           <Image src={heroData.image} alt="Placeholder hero image" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/25" />

@@ -1,4 +1,5 @@
 import { Footer } from "@/components/layout/Footer";
+import { FloatingActions } from "@/components/common/FloatingActions";
 import { Header } from "@/components/layout/Header";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -13,6 +14,7 @@ export default function HomePage() {
   return (
     <div className="relative overflow-hidden">
       <Header />
+      <FloatingActions />
       <main>
         <Hero />
         <ServicesSection />
