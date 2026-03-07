@@ -18,12 +18,16 @@ import {
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/88 backdrop-blur-xl">
-      <div className="container flex h-20 items-center justify-between">
-        <Link href="#top" className="max-w-[16rem] font-display text-3xl leading-tight text-foreground md:text-4xl">
-          Psychoterapia Sandra Anczarska
+      <div className="container flex h-20 items-center justify-between lg:h-24 lg:gap-8">
+        <Link
+          href="#top"
+          className="max-w-[13rem] font-display text-[2rem] leading-[0.9] text-foreground sm:max-w-[15rem] sm:text-[2.3rem] md:text-[2.55rem] lg:max-w-none lg:whitespace-nowrap lg:text-[2.05rem] lg:leading-none"
+        >
+          <span className="sm:hidden">Sandra Anczarska</span>
+          <span className="hidden sm:inline">Psychoterapia Sandra Anczarska</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}

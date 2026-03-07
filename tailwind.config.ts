@@ -48,7 +48,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-manrope)"],
-        display: ["var(--font-cormorant)"],
+        display: ["var(--font-display)"],
       },
       backgroundImage: {
         "hero-glow":

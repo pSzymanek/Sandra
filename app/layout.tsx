@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
 
@@ -8,10 +8,10 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-const cormorant = Cormorant_Garamond({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["400", "500", "600"],
+  variable: "--font-display",
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${manrope.variable} ${cormorant.variable} font-sans`}>{children}</body>
+      <body className={`${manrope.variable} ${plusJakartaSans.variable} font-sans`}>{children}</body>
     </html>
   );
 }

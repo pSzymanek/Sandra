@@ -12,14 +12,16 @@ import { servicesData } from "@/data/mock";
 
 export function ServicesSection() {
   return (
-    <section id="oferta" className="bg-primary/12 py-20 md:py-28">
-      <div className="container">
+    <section id="oferta" className="relative overflow-hidden bg-[#6f8879] py-20 md:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(48%_48%_at_6%_14%,rgba(255,255,255,0.2),transparent_70%),radial-gradient(34%_34%_at_92%_84%,rgba(232,189,151,0.22),transparent_72%)]" />
+      <div className="container relative">
         <Reveal>
           <SectionHeading
             eyebrow={servicesData.eyebrow}
             title={servicesData.title}
             description={servicesData.description}
             align="center"
+            className="[&_h2]:text-[#f6f2e9] [&_p]:text-[#dbe8db]"
           />
         </Reveal>
 
