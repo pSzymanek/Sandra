@@ -18,13 +18,18 @@ import {
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/88 backdrop-blur-xl">
-      <div className="container flex h-20 items-center justify-between lg:h-24 lg:gap-8">
+      <div className="container flex h-24 items-center justify-between lg:h-24 lg:gap-8">
         <Link
           href="#top"
-          className="max-w-[13rem] font-display text-[2rem] leading-[0.9] text-foreground sm:max-w-[15rem] sm:text-[2.3rem] md:text-[2.55rem] lg:max-w-none lg:whitespace-nowrap lg:text-[2.05rem] lg:leading-none"
+          className="pr-3 font-display text-foreground lg:pr-0"
         >
-          <span className="sm:hidden">Sandra Anczarska</span>
-          <span className="hidden sm:inline">Psychoterapia Sandra Anczarska</span>
+          <span className="block text-[1.62rem] leading-[1.02] sm:text-[1.78rem] md:text-[1.95rem] lg:hidden">
+            <span className="block">Psychoterapia</span>
+            <span className="block">Sandra Anczarska</span>
+          </span>
+          <span className="hidden whitespace-nowrap text-[2.05rem] leading-none lg:inline">
+            Psychoterapia Sandra Anczarska
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">

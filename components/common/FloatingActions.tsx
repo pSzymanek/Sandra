@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Link2, Music2, Phone } from "lucide-react";
 
@@ -38,16 +39,32 @@ function CircleButton({
 }
 
 export function FloatingActions() {
+  const [showSocials, setShowSocials] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowSocials(window.scrollY > 120);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        initial={false}
+        animate={{
+          opacity: showSocials ? 1 : 0,
+          y: showSocials ? 0 : 18,
+          x: showSocials ? 0 : -10,
+        }}
+        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed bottom-4 left-3 z-30 sm:left-5"
         style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
-        <div className="pointer-events-auto flex flex-col gap-2.5">
+        <div className={cn("flex flex-col gap-2.5", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
           {socials.map((item) => {
             const Icon = item.icon;
             return (
@@ -63,7 +80,7 @@ export function FloatingActions() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none fixed bottom-4 right-3 z-30 md:hidden"
+        className="pointer-events-none fixed bottom-4 right-3 z-30 lg:hidden"
         style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
       >
         <div className="pointer-events-auto">
