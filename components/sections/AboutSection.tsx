@@ -9,7 +9,7 @@ export function AboutSection() {
   return (
     <section id="o-mnie" className="py-20 md:py-28">
       <div className="container grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <Reveal className="group">
+        <Reveal className="group lg:order-2">
           <PlaceholderImage
             src={aboutData.image}
             alt="Placeholder o mnie"
@@ -17,7 +17,7 @@ export function AboutSection() {
           />
         </Reveal>
 
-        <Reveal delay={0.08}>
+        <Reveal delay={0.08} className="lg:order-1">
           <Badge variant="outline">[O mnie]</Badge>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">{aboutData.name}</h2>
           <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-primary/90">{aboutData.role}</p>
