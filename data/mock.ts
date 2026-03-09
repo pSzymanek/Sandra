@@ -9,7 +9,7 @@ export const navItems = [
 export const heroData = {
   eyebrow: "[Lokalizacja / kategoria]",
   title: "[Glowny naglowek strony]",
-  description: "[Krotki opis gabinetu]",
+  description: "[krótki cytat]",
   primaryCta: "[Widget znany lekarz]",
   secondaryCta: "[Przycisk dodatkowy]",
   image: "/placeholders/hero-placeholder.svg",
