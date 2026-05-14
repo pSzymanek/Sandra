@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-import { navItems } from "@/data/mock";
+import { navItems, profileUrl } from "@/data/mock";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -19,25 +19,23 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/88 backdrop-blur-xl">
       <div className="container flex h-24 items-center justify-between lg:h-24 lg:gap-8">
-        <Link
-          href="#top"
-          className="pr-3 font-display text-foreground lg:pr-0"
-        >
-          <span className="block text-[1.62rem] leading-[1.02] sm:text-[1.78rem] md:text-[1.95rem] lg:hidden">
-            <span className="block">Psychoterapia</span>
-            <span className="block">Sandra Anczarska</span>
-          </span>
-          <span className="hidden whitespace-nowrap text-[2.05rem] leading-none lg:inline">
-            Psychoterapia Sandra Anczarska
+        <Link href="#top" className="pr-3 font-display text-foreground lg:pr-0">
+          <span className="block leading-none">
+            <span className="block whitespace-nowrap text-[1.68rem] sm:text-[1.9rem] md:text-[2.05rem] lg:text-[2.15rem]">
+              Sandra Anczarska
+            </span>
+            <span className="mt-1 block text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-primary/80 sm:text-[0.78rem] lg:text-[0.8rem]">
+              Psychoterapia
+            </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+        <nav className="hidden items-center gap-2 xl:gap-3 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground"
+              className="rounded-full px-4 py-2.5 text-[0.95rem] font-medium text-foreground/80 transition-colors hover:bg-secondary/70 hover:text-foreground"
             >
               {item.label}
             </Link>
@@ -45,7 +43,11 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button variant="terracotta">[Widget znany lekarz]</Button>
+          <Button asChild variant="terracotta">
+            <Link href={profileUrl} target="_blank" rel="noreferrer">
+              Umów wizytę
+            </Link>
+          </Button>
         </div>
 
         <Sheet>
@@ -63,20 +65,25 @@ export function Header() {
                 <span className="block">Psychoterapia</span>
                 <span className="block whitespace-nowrap">Sandra Anczarska</span>
               </SheetTitle>
-              <SheetDescription className="text-foreground/55">[Nawigacja mobilna]</SheetDescription>
+              <SheetDescription className="text-foreground/55">Nawigacja mobilna</SheetDescription>
             </SheetHeader>
             <nav className="mt-10 flex flex-col gap-6">
               {navItems.map((item) => (
                 <SheetClose asChild key={item.href}>
-                  <Link href={item.href} className="text-[2rem] font-display leading-none text-foreground">
+                  <Link
+                    href={item.href}
+                    className="-mx-4 rounded-2xl px-4 py-2 text-[2rem] font-display leading-none text-foreground transition-colors hover:bg-white/35"
+                  >
                     {item.label}
                   </Link>
                 </SheetClose>
               ))}
             </nav>
             <SheetClose asChild>
-              <Button variant="terracotta" className="mt-10 h-14 w-full rounded-2xl text-xl font-display font-normal">
-                [Widget znany lekarz]
+              <Button asChild variant="terracotta" className="mt-10 h-14 w-full rounded-2xl text-xl font-display font-normal">
+                <Link href={profileUrl} target="_blank" rel="noreferrer">
+                  Umów wizytę
+                </Link>
               </Button>
             </SheetClose>
           </SheetContent>

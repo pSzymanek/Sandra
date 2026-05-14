@@ -16,7 +16,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Psychoterapia Sandra Anczarska",
-  description: "Placeholder landing page for premium psychotherapy studio.",
+  description:
+    "Prowadzę psychoterapię i wsparcie psychologiczne w Mysłowicach oraz online. Sandra Anczarska, psycholog i psychoterapeutka.",
 };
 
 export default function RootLayout({

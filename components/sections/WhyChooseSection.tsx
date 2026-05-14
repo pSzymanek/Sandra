@@ -1,21 +1,21 @@
 "use client";
 
-import { PhoneCall } from "lucide-react";
+import Link from "next/link";
 
 import { PlaceholderImage } from "@/components/common/placeholder-image";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { whyChooseData } from "@/data/mock";
+import { profileUrl, whyChooseData } from "@/data/mock";
 
 export function WhyChooseSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="zakres-pomocy" className="py-20 md:py-28">
       <div className="container grid items-center gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
         <Reveal className="group">
           <PlaceholderImage
             src={whyChooseData.image}
-            alt="Placeholder dlaczego warto"
+            alt="Spokojna przestrzeń terapeutyczna"
             className="aspect-[4/5] min-h-[25rem] w-full"
           />
         </Reveal>
@@ -35,14 +35,12 @@ export function WhyChooseSection() {
               ))}
             </ul>
 
-            <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              <Button variant="terracotta">{whyChooseData.cta}</Button>
-              <div className="flex items-center gap-3 rounded-2xl border border-border/70 bg-background/70 px-4 py-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                  <PhoneCall className="h-4 w-4" />
-                </span>
-                <p className="text-sm font-medium text-foreground/90">{whyChooseData.phone}</p>
-              </div>
+            <div className="mt-8">
+              <Button asChild variant="terracotta">
+                <Link href={profileUrl} target="_blank" rel="noreferrer">
+                  {whyChooseData.cta}
+                </Link>
+              </Button>
             </div>
           </Card>
         </Reveal>

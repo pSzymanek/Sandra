@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 import { PlaceholderImage } from "@/components/common/placeholder-image";
 import { Button } from "@/components/ui/button";
-import { heroData } from "@/data/mock";
+import { heroData, profileUrl } from "@/data/mock";
 
 export function Hero() {
   return (
@@ -17,7 +18,7 @@ export function Hero() {
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           className="relative min-h-[39rem] w-full overflow-hidden bg-secondary/65"
         >
-          <Image src={heroData.image} alt="Placeholder hero image" fill priority className="object-cover" />
+          <Image src={heroData.image} alt="Sandra Anczarska" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/25" />
 
           <div className="absolute inset-x-5 top-5 rounded-[1.4rem] border border-border/60 bg-background/72 p-5 backdrop-blur-sm">
@@ -27,15 +28,18 @@ export function Hero() {
           </div>
 
           <div className="absolute inset-x-5 bottom-5 flex flex-col gap-3">
-            <Button variant="terracotta" size="lg" className="h-14 w-full rounded-2xl text-[1.38rem] font-normal font-display">
-              {heroData.primaryCta}
+            <Button asChild variant="terracotta" size="lg" className="h-14 w-full rounded-2xl text-[1.38rem] font-normal font-display">
+              <Link href={profileUrl} target="_blank" rel="noreferrer">
+                {heroData.primaryCta}
+              </Link>
             </Button>
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="h-14 w-full rounded-2xl border-background/65 bg-background/70 text-[1.32rem] font-normal font-display backdrop-blur-sm"
             >
-              {heroData.secondaryCta}
+              <Link href="#oferta">{heroData.secondaryCta}</Link>
             </Button>
           </div>
         </motion.div>
@@ -54,11 +58,13 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-[33rem] text-lg text-muted-foreground">{heroData.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="terracotta" size="lg">
-              {heroData.primaryCta}
+            <Button asChild variant="terracotta" size="lg">
+              <Link href={profileUrl} target="_blank" rel="noreferrer">
+                {heroData.primaryCta}
+              </Link>
             </Button>
-            <Button variant="outline" size="lg">
-              {heroData.secondaryCta}
+            <Button asChild variant="outline" size="lg">
+              <Link href="#oferta">{heroData.secondaryCta}</Link>
             </Button>
           </div>
         </motion.div>
@@ -73,9 +79,9 @@ export function Hero() {
           <div className="absolute -bottom-6 -right-6 h-44 w-44 rounded-full bg-accent/18 blur-2xl" />
           <PlaceholderImage
             src={heroData.image}
-            alt="Placeholder hero image"
+            alt="Sandra Anczarska"
             priority
-            className="aspect-[4/5] min-h-[28rem] w-full xl:min-h-[30rem]"
+            className="mx-auto aspect-square w-full max-w-[33rem]"
           />
         </motion.div>
       </div>

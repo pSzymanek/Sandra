@@ -1,12 +1,13 @@
-"use client";
+﻿"use client";
 
-import { Quote } from "lucide-react";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ExternalLink, Star } from "lucide-react";
 
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { testimonialsData } from "@/data/mock";
+import { googleReviewsUrl, testimonialsData } from "@/data/mock";
 
 export function TestimonialsSection() {
   return (
@@ -21,23 +22,31 @@ export function TestimonialsSection() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {testimonialsData.items.map((item, index) => (
-            <Reveal key={item.name + index} delay={index * 0.08}>
-              <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.22, ease: "easeOut" }}>
-                <Card className="h-full rounded-[1.7rem] bg-card/95">
-                  <CardContent className="flex h-full flex-col gap-5 pt-6">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/12 text-primary">
-                      <Quote className="h-4 w-4" />
-                    </span>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.quote}</p>
-                    <p className="mt-auto text-sm font-semibold text-foreground">{item.name}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={0.08}>
+          <Card className="mx-auto mt-14 max-w-3xl overflow-hidden rounded-[2rem] bg-card/95 shadow-panel">
+            <CardContent className="relative p-7 text-center md:p-10">
+              <div className="pointer-events-none absolute -left-20 -top-20 h-52 w-52 rounded-full bg-primary/12 blur-2xl" />
+              <div className="pointer-events-none absolute -bottom-24 right-0 h-56 w-56 rounded-full bg-accent/14 blur-2xl" />
+
+              <div className="relative mx-auto flex max-w-xl flex-col items-center">
+                <div className="flex items-center gap-1 text-[#f4b400]" aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} className="h-5 w-5 fill-current" />
+                  ))}
+                </div>
+
+                <p className="mt-5 font-display text-3xl leading-tight text-foreground md:text-4xl">Opinie Google</p>
+
+                <Button asChild variant="outline" size="lg" className="mt-7">
+                  <Link href={googleReviewsUrl} target="_blank" rel="noreferrer">
+                    Zobacz opinie w Google
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </Reveal>
       </div>
     </section>
   );

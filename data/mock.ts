@@ -1,163 +1,138 @@
+﻿export const profileUrl = "https://www.znanylekarz.pl/sandra-anczarska/psycholog-psychoterapeuta/myslowice";
+export const googleReviewsUrl = "https://share.google/nraI5njoL6QQzdYJY";
+
 export const navItems = [
   { label: "Oferta", href: "#oferta" },
   { label: "O mnie", href: "#o-mnie" },
-  { label: "Zespół", href: "#zespol" },
+  { label: "Zakres pomocy", href: "#zakres-pomocy" },
   { label: "Opinie", href: "#opinie" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
 export const heroData = {
-  eyebrow: "[Lokalizacja / kategoria]",
-  title: "[Glowny naglowek strony]",
-  description: "[krótki cytat]",
-  primaryCta: "[Widget znany lekarz]",
-  secondaryCta: "[Przycisk dodatkowy]",
-  image: "/placeholders/hero-placeholder.svg",
+  eyebrow: "Psycholog i psychoterapeutka | Mysłowice",
+  title: "Sandra Anczarska",
+  description:
+    "Prowadzę wsparcie psychologiczne i psychoterapeutyczne dla dorosłych oraz dzieci od 7. roku życia w gabinecie w Mysłowicach i online.",
+  primaryCta: "Umów wizytę",
+  secondaryCta: "Poznaj ofertę",
+  image: "/images/sandra-anczarska.jpg",
 };
 
 export const servicesData = {
-  eyebrow: "[Naglowek sekcji]",
-  title: "[Formy wsparcia / uslugi]",
-  description: "[Krotki opis sekcji]",
+  eyebrow: "Oferta",
+  title: "Formy wsparcia",
+  description: "Poniżej znajdziesz główne obszary, w których pracuję.",
   items: [
     {
-      title: "[Nazwa uslugi]",
-      description: "[Opis uslugi]",
-      price: "[Cena / czas]",
-      cta: "[Dowiedz sie wiecej]",
-      image: "/placeholders/service-1.svg",
+      title: "Konsultacja psychoterapeutyczna",
+      description:
+        "Spotkanie dla osób, które potrzebują rozmowy, uporządkowania trudności i dobrania dalszej formy pracy terapeutycznej.",
+      price: "180 zł",
+      cta: "Umów wizytę",
+      image: "/images/service-psychotherapy.png",
     },
     {
-      title: "[Nazwa uslugi]",
-      description: "[Opis uslugi]",
-      price: "[Cena / czas]",
-      cta: "[Dowiedz sie wiecej]",
-      image: "/placeholders/service-2.svg",
+      title: "Poradnictwo psychologiczne",
+      description:
+        "Pomagam w sytuacjach przeciążenia, kryzysu emocjonalnego, lęku, obniżonego nastroju i trudności w codziennym funkcjonowaniu.",
+      price: "180 zł",
+      cta: "Umów wizytę",
+      image: "/images/service-counseling.png",
     },
     {
-      title: "[Nazwa uslugi]",
-      description: "[Opis uslugi]",
-      price: "[Cena / czas]",
-      cta: "[Dowiedz sie wiecej]",
-      image: "/placeholders/service-3.svg",
+      title: "Konsultacja online",
+      description:
+        "Prowadzę także konsultacje zdalne dla osób, które chcą skorzystać ze wsparcia bez wizyty w gabinecie stacjonarnym.",
+      price: "Szczegóły w rezerwacji",
+      cta: "Umów wizytę",
+      image: "/images/service-online.png",
     },
   ],
 };
 
 export const whyChooseData = {
-  eyebrow: "[Maly naglowek]",
-  title: "[Duzy naglowek]",
-  description: "[Krotki opis]",
-  image: "/placeholders/why-placeholder.svg",
-  benefits: ["[Benefit 1]", "[Benefit 2]", "[Benefit 3]", "[Benefit 4]"],
-  cta: "[Widget znany lekarz]",
-  phone: "[Telefon]",
+  eyebrow: "Zakres pomocy",
+  title: "Wsparcie w obszarach emocji, lęku i kryzysu",
+  description:
+    "Pracuję w obszarze konsultacji psychologicznych i psychoterapii, w tym terapii długoterminowej oraz psychoterapii młodzieży.",
+  image: "/images/support-scope.png",
+  benefits: [
+    "Zaburzenia emocjonalne, zaburzenia lękowe i kryzys emocjonalny",
+    "Depresja, zaburzenia nastroju oraz bezsenność",
+    "Wsparcie dla dorosłych oraz dzieci od 7. roku życia",
+    "Gabinet stacjonarny w Mysłowicach i konsultacje online",
+  ],
+  cta: "Umów wizytę",
+  phone: "Kontakt przez profil ZnanyLekarz",
 };
 
 export const aboutData = {
   name: "Sandra Anczarska",
-  role: "[Stanowisko / specjalizacja]",
+  role: "Psycholog, psychoterapeutka Gestalt w procesie szkolenia",
   paragraphs: [
-    "[Akapit placeholderowy 1]",
-    "[Akapit placeholderowy 2]",
-    "[Akapit placeholderowy 3]",
+    "Jestem psychologiem i psychoterapeutką Gestalt w procesie szkolenia w Warszawskiej Szkole Psychoterapii Gestalt. Ukończyłam jednolite studia magisterskie na kierunku psychologia na Uniwersytecie SWPS w Katowicach.",
+    "Doświadczenie zdobywałam między innymi w ośrodku socjoterapeutycznym, instytucjach publicznych związanych z pomocą osobom doświadczającym przemocy w rodzinie oraz w ośrodku dla osób doświadczających choroby psychicznej.",
+    "W pracy terapeutycznej ważne są dla mnie kontakt, zrozumienie i bezpieczna przestrzeń. Swoją pracę poddaję regularnej superwizji i rozwijam kompetencje przez szkolenia oraz webinary.",
   ],
-  image: "/placeholders/about-placeholder.svg",
-};
-
-export const teamData = {
-  eyebrow: "[Naglowek sekcji]",
-  title: "[Zespół]",
-  description: "[Krotki opis sekcji]",
-  members: [
-    {
-      name: "Sandra Anczarska",
-      role: "[Rola / specjalizacja]",
-      bio: "[Krotki opis]",
-      image: "/placeholders/team-1.svg",
-      tags: ["[Tag 1]", "[Tag 2]", "[Tag 3]"],
-    },
-    {
-      name: "[Imie i nazwisko]",
-      role: "[Rola / specjalizacja]",
-      bio: "[Krotki opis]",
-      image: "/placeholders/team-2.svg",
-      tags: ["[Tag 1]", "[Tag 2]", "[Tag 3]"],
-    },
-    {
-      name: "[Imie i nazwisko]",
-      role: "[Rola / specjalizacja]",
-      bio: "[Krotki opis]",
-      image: "/placeholders/team-3.svg",
-      tags: ["[Tag 1]", "[Tag 2]", "[Tag 3]"],
-    },
-    {
-      name: "[Imie i nazwisko]",
-      role: "[Rola / specjalizacja]",
-      bio: "[Krotki opis]",
-      image: "/placeholders/team-4.svg",
-      tags: ["[Tag 1]", "[Tag 2]", "[Tag 3]"],
-    },
-  ],
+  image: "/images/sandra-anczarska.jpg",
 };
 
 export const testimonialsData = {
-  eyebrow: "[Naglowek sekcji]",
-  title: "[Opinie]",
-  description: "[Krotki opis sekcji]",
-  items: [
-    { name: "[Imie]", quote: "[Tresc opinii]" },
-    { name: "[Imie]", quote: "[Tresc opinii]" },
-    { name: "[Imie]", quote: "[Tresc opinii]" },
-    { name: "[Imie]", quote: "[Tresc opinii]" },
-  ],
+  eyebrow: "Opinie",
+  title: "Opinie pacjentów",
+  description: "",
 };
 
 export const faqData = {
-  eyebrow: "[Naglowek sekcji]",
-  title: "[FAQ]",
-  description: "[Krotki opis sekcji]",
+  eyebrow: "FAQ",
+  title: "Najczęstsze pytania",
+  description: "Informacje, które mogą pomóc przed pierwszą wizytą.",
   items: [
     {
-      question: "[Pytanie 1]",
-      answer: "[Odpowiedz placeholderowa]",
+      question: "Czy można skorzystać z konsultacji online?",
+      answer: "Tak, prowadzę konsultacje online. Aktualną dostępność terminów sprawdzisz w widgetcie rezerwacyjnym.",
     },
     {
-      question: "[Pytanie 2]",
-      answer: "[Odpowiedz placeholderowa]",
+      question: "Gdzie znajduje się gabinet?",
+      answer: "Przyjmuję w Gabinecie Psychologicznym i Psychoterapii Sandra Anczarska przy ul. Wojska Polskiego 3 w Mysłowicach.",
     },
     {
-      question: "[Pytanie 3]",
-      answer: "[Odpowiedz placeholderowa]",
+      question: "Dla kogo jest oferta?",
+      answer: "Przyjmuję osoby dorosłe oraz dzieci od 7. roku życia. Zakres pracy zależy od wybranej formy konsultacji.",
     },
     {
-      question: "[Pytanie 4]",
-      answer: "[Odpowiedz placeholderowa]",
+      question: "Jakie usługi są dostępne?",
+      answer: "Prowadzę między innymi konsultacje psychoterapeutyczne, poradnictwo psychologiczne, konsultacje online i warsztaty psychologiczne.",
     },
     {
-      question: "[Pytanie 5]",
-      answer: "[Odpowiedz placeholderowa]",
-    },
-    {
-      question: "[Pytanie 6]",
-      answer: "[Odpowiedz placeholderowa]",
+      question: "Ile kosztuje konsultacja?",
+      answer: "W profilu ZnanyLekarz widoczna jest cena 180 zł dla konsultacji psychoterapeutycznej oraz poradnictwa psychologicznego. Aktualne ceny potwierdzisz w widgetcie rezerwacyjnym.",
     },
   ],
 };
 
 export const contactData = {
-  eyebrow: "[Naglowek sekcji]",
-  title: "[Kontakt]",
-  description: "[Krotki opis sekcji]",
+  eyebrow: "Kontakt",
+  title: "Sprawdź najbliższe terminy oraz umów wizytę",
+  description:
+    "Aktualne terminy, ceny i szczegóły rezerwacji sprawdzisz na znanylekarz.pl.",
   details: [
-    { label: "[Telefon]", value: "[Numer telefonu]" },
-    { label: "[Email]", value: "[Adres email]" },
-    { label: "[Adres]", value: "[Adres]" },
-    { label: "[Godziny]", value: "[Godziny otwarcia]" },
+    { label: "Gabinet", value: "Gabinet Psychologiczny i Psychoterapii Sandra Anczarska" },
+    { label: "Adres", value: "Wojska Polskiego 3, 41-400 Mysłowice" },
+    { label: "Forma", value: "Wizyty stacjonarne i konsultacje online" },
+    { label: "Pacjenci", value: "Dorośli oraz dzieci od 7. roku życia" },
   ],
+  bookingTitle: "Umów wizytę",
+  bookingDescription:
+    "Skorzystaj z serwisu ZnanyLekarz, żeby sprawdzić dostępne terminy i wybrać dogodną formę wizyty.",
+  bookingCta: "Umów wizytę",
 };
 
 export const footerData = {
-  copy: "[Krotka stopka placeholderowa]",
-  socials: ["Instagram", "Facebook", "LinkedIn"],
+  copy: "Prowadzę psychoterapię i wsparcie psychologiczne w Mysłowicach oraz online.",
+  contact: ["Wojska Polskiego 3, 41-400 Mysłowice", "Konsultacje online", "Rezerwacja przez ZnanyLekarz"],
+  socials: ["Instagram", "Facebook", "ZnanyLekarz"],
 };
+
+

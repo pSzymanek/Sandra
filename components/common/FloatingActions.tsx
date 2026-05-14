@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { ArrowUp, Facebook, Instagram, Link2, Music2, Phone } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { profileUrl } from "@/data/mock";
 
 const socials = [
   { label: "Facebook", href: "#", icon: Facebook, bg: "bg-[#c6866a]" },
   { label: "Instagram", href: "#", icon: Instagram, bg: "bg-[#c6866a]" },
   { label: "TikTok", href: "#", icon: Music2, bg: "bg-[#c6866a]" },
-  { label: "Link", href: "#", icon: Link2, bg: "bg-black" },
+  { label: "ZnanyLekarz", href: profileUrl, icon: Link2, bg: "bg-black" },
 ];
 
 function CircleButton({
@@ -42,7 +43,7 @@ function ScrollTopButton({ className }: { className?: string }) {
   return (
     <button
       type="button"
-      aria-label="Przewin do gory"
+      aria-label="Przewiń do góry"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={cn(
         "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5",
@@ -109,7 +110,7 @@ export function FloatingActions() {
             <ScrollTopButton className="h-14 w-14 border-white/45 bg-[#2f4350]" />
           </motion.div>
 
-          <CircleButton label="Telefon" href="#" className="h-16 w-16 border-white/45 bg-[#6f8879]">
+          <CircleButton label="Telefon" href="#kontakt" className="h-16 w-16 border-white/45 bg-[#6f8879]">
             <Phone className="h-7 w-7" />
           </CircleButton>
         </div>

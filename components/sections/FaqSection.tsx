@@ -8,7 +8,7 @@ import { faqData } from "@/data/mock";
 
 export function FaqSection() {
   return (
-    <section className="bg-secondary/35 py-20 md:py-28">
+    <section id="faq" className="bg-secondary/35 py-20 md:py-28">
       <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <Reveal>
           <SectionHeading eyebrow={faqData.eyebrow} title={faqData.title} description={faqData.description} />

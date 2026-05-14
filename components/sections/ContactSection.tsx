@@ -1,17 +1,15 @@
-"use client";
+﻿"use client";
 
-import { Mail, MapPin, Phone, Send, Timer } from "lucide-react";
+import { CalendarCheck, MapPin, Monitor, UserRound } from "lucide-react";
 
 import { PlaceholderImage } from "@/components/common/placeholder-image";
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
-import { Button } from "@/components/ui/button";
+import { ZnanyLekarzWidget } from "@/components/common/ZnanyLekarzWidget";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { contactData } from "@/data/mock";
 
-const detailIcons = [Phone, Mail, MapPin, Timer];
+const detailIcons = [CalendarCheck, MapPin, Monitor, UserRound];
 
 export function ContactSection() {
   return (
@@ -46,8 +44,8 @@ export function ContactSection() {
                 })}
 
                 <PlaceholderImage
-                  src="/placeholders/map-placeholder.svg"
-                  alt="Placeholder mapa"
+                  src="/images/address-photo.jpg"
+                  alt="Budynek przy ul. Wojska Polskiego 3 w Mysłowicach"
                   className="aspect-[16/9] min-h-40 w-full rounded-2xl"
                 />
               </CardContent>
@@ -55,19 +53,16 @@ export function ContactSection() {
           </Reveal>
 
           <Reveal delay={0.06}>
-            <Card className="rounded-[2rem] bg-card/95 p-7 md:p-8">
-              <form className="space-y-4">
-                <div className="grid gap-4 md:grid-cols-2">
-                  <Input placeholder="[Imie]" aria-label="Imie" />
-                  <Input type="email" placeholder="[Email]" aria-label="Email" />
+            <Card className="h-full rounded-[2rem] bg-card/95 p-7 md:p-10">
+              <div className="flex h-full min-h-[24rem] flex-col">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/90">Rezerwacja</p>
+                <h3 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{contactData.bookingTitle}</h3>
+                <p className="mt-5 max-w-xl text-muted-foreground">{contactData.bookingDescription}</p>
+
+                <div className="mt-8 max-w-xl">
+                  <ZnanyLekarzWidget className="inline-flex min-h-12 w-full items-center justify-center rounded-2xl bg-accent px-6 py-3 text-center text-base font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:brightness-95 md:w-auto" />
                 </div>
-                <Input placeholder="[Telefon]" aria-label="Telefon" />
-                <Textarea placeholder="[Wiadomosc]" aria-label="Wiadomosc" />
-                <Button type="button" variant="terracotta" className="w-full md:w-auto">
-                  <Send className="mr-2 h-4 w-4" />
-                  [Wyslij]
-                </Button>
-              </form>
+              </div>
             </Card>
           </Reveal>
         </div>

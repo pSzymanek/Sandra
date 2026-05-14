@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+﻿import Link from "next/link";
+import { Facebook, Instagram, Link2 } from "lucide-react";
 
-import { footerData, navItems } from "@/data/mock";
+import { footerData, navItems, profileUrl } from "@/data/mock";
 
 const socialMap = {
   Instagram,
   Facebook,
-  LinkedIn: Linkedin,
+  ZnanyLekarz: Link2,
 } as const;
 
 export function Footer() {
@@ -19,7 +19,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">[Menu]</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Menu</p>
           <div className="mt-4 flex flex-col gap-2">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="text-sm text-foreground/80 hover:text-foreground">
@@ -30,11 +30,11 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">[Kontakt]</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Kontakt</p>
           <div className="mt-4 space-y-2 text-sm text-foreground/80">
-            <p>[Telefon]</p>
-            <p>[Email]</p>
-            <p>[Adres]</p>
+            {footerData.contact.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
           </div>
           <div className="mt-6 flex items-center gap-2">
             {footerData.socials.map((name) => {
@@ -46,7 +46,9 @@ export function Footer() {
               return (
                 <a
                   key={name}
-                  href="#"
+                  href={name === "ZnanyLekarz" ? profileUrl : "#"}
+                  target={name === "ZnanyLekarz" ? "_blank" : undefined}
+                  rel={name === "ZnanyLekarz" ? "noreferrer" : undefined}
                   aria-label={name}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-background/85 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
                 >

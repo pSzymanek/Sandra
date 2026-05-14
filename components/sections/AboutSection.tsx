@@ -12,13 +12,13 @@ export function AboutSection() {
         <Reveal className="group lg:order-2">
           <PlaceholderImage
             src={aboutData.image}
-            alt="Placeholder o mnie"
-            className="aspect-[3/4] min-h-[25rem] w-full"
+            alt="Sandra Anczarska"
+            className="mx-auto aspect-square w-full max-w-[32rem]"
           />
         </Reveal>
 
         <Reveal delay={0.08} className="lg:order-1">
-          <Badge variant="outline">[O mnie]</Badge>
+          <Badge variant="outline">O mnie</Badge>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">{aboutData.name}</h2>
           <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-primary/90">{aboutData.role}</p>
           <div className="mt-6 space-y-4 text-base text-muted-foreground md:text-lg">

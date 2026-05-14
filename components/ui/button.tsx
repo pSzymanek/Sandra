@@ -15,7 +15,7 @@ const buttonVariants = cva(
           "border border-border bg-background/70 text-foreground hover:-translate-y-0.5 hover:bg-secondary",
         ghost: "text-foreground hover:bg-secondary",
         terracotta:
-          "bg-accent text-accent-foreground shadow-soft hover:-translate-y-0.5 hover:brightness-95",
+          "bg-accent text-white shadow-soft hover:-translate-y-0.5 hover:brightness-95",
       },
       size: {
         default: "h-11 px-6",
