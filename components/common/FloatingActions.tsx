@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ function CircleButton({
       href={href}
       aria-label={label}
       className={cn(
-        "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5",
+        "inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5 lg:h-14 lg:w-14",
         className,
       )}
     >
@@ -46,11 +46,11 @@ function ScrollTopButton({ className }: { className?: string }) {
       aria-label="Przewiń do góry"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={cn(
-        "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5",
+        "inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white shadow-soft transition-transform duration-300 hover:-translate-y-0.5 lg:h-14 lg:w-14",
         className,
       )}
     >
-      <ArrowUp className="h-6 w-6" />
+      <ArrowUp className="h-5 w-5 lg:h-6 lg:w-6" />
     </button>
   );
 }
@@ -78,15 +78,15 @@ export function FloatingActions() {
           x: showSocials ? 0 : -10,
         }}
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none fixed bottom-4 left-3 z-30 sm:left-5"
-        style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
+        className="pointer-events-none fixed bottom-3 left-2.5 z-30 sm:left-5 lg:bottom-4"
+        style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
-        <div className={cn("flex flex-col gap-2.5", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
+        <div className={cn("flex flex-col gap-2 lg:gap-2.5", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
           {socials.map((item) => {
             const Icon = item.icon;
             return (
               <CircleButton key={item.label} href={item.href} label={item.label} className={item.bg}>
-                <Icon className="h-6 w-6" />
+                <Icon className="h-5 w-5 lg:h-6 lg:w-6" />
               </CircleButton>
             );
           })}
@@ -97,21 +97,21 @@ export function FloatingActions() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none fixed bottom-4 right-3 z-30 lg:hidden"
-        style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
+        className="pointer-events-none fixed bottom-3 right-2.5 z-30 lg:hidden"
+        style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
-        <div className="pointer-events-auto flex flex-col gap-2.5">
+        <div className="pointer-events-auto flex flex-col gap-2">
           <motion.div
             initial={false}
             animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 10 }}
             transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
             className={cn(showSocials ? "pointer-events-auto" : "pointer-events-none")}
           >
-            <ScrollTopButton className="h-14 w-14 border-white/45 bg-[#2f4350]" />
+            <ScrollTopButton className="border-white/45 bg-[#2f4350]" />
           </motion.div>
 
-          <CircleButton label="Telefon" href="#kontakt" className="h-16 w-16 border-white/45 bg-[#6f8879]">
-            <Phone className="h-7 w-7" />
+          <CircleButton label="Telefon" href="#kontakt" className="h-12 w-12 border-white/45 bg-[#6f8879]">
+            <Phone className="h-5 w-5" />
           </CircleButton>
         </div>
       </motion.div>
