@@ -57,10 +57,15 @@ function ScrollTopButton({ className }: { className?: string }) {
 
 export function FloatingActions() {
   const [showSocials, setShowSocials] = useState(false);
+  const [hideNearBottom, setHideNearBottom] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
       setShowSocials(window.scrollY > 120);
+      setHideNearBottom(documentHeight - scrollBottom < 520);
     };
 
     onScroll();
@@ -73,15 +78,20 @@ export function FloatingActions() {
       <motion.div
         initial={false}
         animate={{
-          opacity: showSocials ? 1 : 0,
-          y: showSocials ? 0 : 18,
-          x: showSocials ? 0 : -10,
+          opacity: showSocials && !hideNearBottom ? 1 : 0,
+          y: showSocials && !hideNearBottom ? 0 : 18,
+          x: showSocials && !hideNearBottom ? 0 : -10,
         }}
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed bottom-3 left-2.5 z-30 sm:left-5 lg:bottom-4"
         style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
-        <div className={cn("flex flex-col gap-2 lg:gap-2.5", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
+        <div
+          className={cn(
+            "flex flex-col gap-2 lg:gap-2.5",
+            showSocials && !hideNearBottom ? "pointer-events-auto" : "pointer-events-none",
+          )}
+        >
           {socials.map((item) => {
             const Icon = item.icon;
             return (
@@ -118,7 +128,11 @@ export function FloatingActions() {
 
       <motion.div
         initial={false}
-        animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 14, x: showSocials ? 0 : 8 }}
+        animate={{
+          opacity: showSocials ? 1 : 0,
+          y: showSocials ? 0 : 14,
+          x: showSocials ? 0 : 8,
+        }}
         transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed bottom-4 right-5 z-30 hidden lg:block"
       >
