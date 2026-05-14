@@ -104,13 +104,13 @@ export function FloatingActions() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={false}
+        animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 16 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed bottom-3 right-2.5 z-30 lg:hidden"
         style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
-        <div className="pointer-events-auto flex flex-col gap-2">
+        <div className={cn("flex flex-col gap-2", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
           <motion.div
             initial={false}
             animate={{ opacity: showSocials ? 1 : 0, y: showSocials ? 0 : 10 }}
