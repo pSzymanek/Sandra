@@ -95,7 +95,7 @@ export const faqData = {
     },
     {
       question: "Gdzie znajduje się gabinet?",
-      answer: "Przyjmuję w Gabinecie Psychologicznym i Psychoterapii Sandra Anczarska przy ul. Wojska Polskiego 3 w Mysłowicach.",
+      answer: "Przyjmuję w gabinecie przy ul. Wojska Polskiego 3 w Mysłowicach.",
     },
     {
       question: "Dla kogo jest oferta?",
@@ -107,7 +107,7 @@ export const faqData = {
     },
     {
       question: "Ile kosztuje konsultacja?",
-      answer: "W profilu ZnanyLekarz widoczna jest cena 180 zł dla konsultacji psychoterapeutycznej oraz poradnictwa psychologicznego. Aktualne ceny potwierdzisz w widgetcie rezerwacyjnym.",
+      answer: "Aktualny cennik wizyt jest dostępny na stronie znanylekarz.pl.",
     },
   ],
 };
