@@ -1,14 +1,14 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { PlaceholderImage } from "@/components/common/placeholder-image";
+import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { profileUrl, servicesData } from "@/data/mock";
+import { profileUrl, servicesData } from "@/data/site-content";
 
 export function ServicesSection() {
   return (
@@ -38,9 +38,9 @@ export function ServicesSection() {
               <motion.div className="h-full" whileHover={{ y: -6 }} transition={{ duration: 0.24, ease: "easeOut" }}>
                 <Card className="group flex h-full flex-col overflow-hidden bg-card/95">
                   <CardHeader className="space-y-5">
-                    <PlaceholderImage
+                    <MediaCard
                       src={service.image}
-                      alt={service.title}
+                      alt={`Ilustracja usługi: ${service.title}`}
                       className="aspect-[4/3] w-full rounded-2xl"
                     />
                     <CardTitle className="font-display text-3xl md:text-[2.05rem]">{service.title}</CardTitle>
@@ -65,3 +65,4 @@ export function ServicesSection() {
     </section>
   );
 }
+

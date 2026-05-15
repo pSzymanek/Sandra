@@ -1,21 +1,21 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 
-import { PlaceholderImage } from "@/components/common/placeholder-image";
+import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { profileUrl, whyChooseData } from "@/data/mock";
+import { profileUrl, whyChooseData } from "@/data/site-content";
 
 export function WhyChooseSection() {
   return (
     <section id="zakres-pomocy" className="py-20 md:py-28">
       <div className="container grid items-center gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
         <Reveal className="group">
-          <PlaceholderImage
+          <MediaCard
             src={whyChooseData.image}
-            alt="Spokojna przestrzeń terapeutyczna"
+            alt="Ilustracja rozmowy terapeutycznej w spokojnej przestrzeni"
             className="aspect-[4/5] min-h-[25rem] w-full"
           />
         </Reveal>
@@ -48,3 +48,4 @@ export function WhyChooseSection() {
     </section>
   );
 }
+

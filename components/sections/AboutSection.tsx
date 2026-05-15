@@ -1,18 +1,18 @@
-"use client";
+﻿"use client";
 
-import { PlaceholderImage } from "@/components/common/placeholder-image";
+import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { Badge } from "@/components/ui/badge";
-import { aboutData } from "@/data/mock";
+import { aboutData } from "@/data/site-content";
 
 export function AboutSection() {
   return (
     <section id="o-mnie" className="py-20 md:py-28">
       <div className="container grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal className="group lg:order-2">
-          <PlaceholderImage
+          <MediaCard
             src={aboutData.image}
-            alt="Sandra Anczarska"
+            alt="Sandra Anczarska, psycholog i psychoterapeutka Gestalt"
             className="mx-auto aspect-square w-full max-w-[32rem]"
           />
         </Reveal>
@@ -31,3 +31,4 @@ export function AboutSection() {
     </section>
   );
 }
+

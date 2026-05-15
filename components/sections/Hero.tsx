@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { PlaceholderImage } from "@/components/common/placeholder-image";
+import { MediaCard } from "@/components/common/media-card";
 import { Button } from "@/components/ui/button";
-import { heroData, profileUrl } from "@/data/mock";
+import { heroData, profileUrl } from "@/data/site-content";
 
 function EyebrowText({ className }: { className?: string }) {
   const [profession, location] = heroData.eyebrow.split("|").map((item) => item.trim());
@@ -39,7 +39,7 @@ export function Hero() {
             <div className="relative h-[clamp(13.75rem,36svh,21rem)] bg-secondary/65">
               <Image
                 src={heroData.image}
-                alt="Sandra Anczarska"
+                alt="Portret Sandry Anczarskiej, psycholog i psychoterapeutki w Mysłowicach"
                 fill
                 priority
                 className="object-cover object-center"
@@ -131,9 +131,9 @@ export function Hero() {
         >
           <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-primary/16 blur-2xl" />
           <div className="absolute -bottom-6 -right-6 h-44 w-44 rounded-full bg-accent/18 blur-2xl" />
-          <PlaceholderImage
+          <MediaCard
             src={heroData.image}
-            alt="Sandra Anczarska"
+            alt="Portret Sandry Anczarskiej, psycholog i psychoterapeutki w Mysłowicach"
             priority
             className="mx-auto aspect-square w-full max-w-[33rem]"
           />
@@ -159,3 +159,4 @@ export function Hero() {
     </section>
   );
 }
+

@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 import { Facebook, Instagram, Link2 } from "lucide-react";
 
-import { footerData, navItems, profileUrl } from "@/data/mock";
+import { footerData, navItems, profileUrl } from "@/data/site-content";
 
 const socialMap = {
   Instagram,
@@ -62,3 +62,4 @@ export function Footer() {
     </footer>
   );
 }
+

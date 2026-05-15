@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUp, Facebook, Instagram, Link2, Music2, Phone } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { profileUrl } from "@/data/mock";
+import { profileUrl } from "@/data/site-content";
 
 const socials = [
   { label: "Facebook", href: "#", icon: Facebook, bg: "bg-[#c6866a]" },
@@ -143,3 +143,4 @@ export function FloatingActions() {
     </>
   );
 }
+

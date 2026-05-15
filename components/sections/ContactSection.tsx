@@ -2,12 +2,12 @@
 
 import { CalendarCheck, MapPin, Monitor, UserRound } from "lucide-react";
 
-import { PlaceholderImage } from "@/components/common/placeholder-image";
+import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
 import { ZnanyLekarzWidget } from "@/components/common/ZnanyLekarzWidget";
 import { Card, CardContent } from "@/components/ui/card";
-import { contactData } from "@/data/mock";
+import { contactData } from "@/data/site-content";
 
 const detailIcons = [CalendarCheck, MapPin, Monitor, UserRound];
 
@@ -43,7 +43,7 @@ export function ContactSection() {
                   );
                 })}
 
-                <PlaceholderImage
+                <MediaCard
                   src="/images/address-photo.jpg"
                   alt="Budynek przy ul. Wojska Polskiego 3 w Mysłowicach"
                   className="aspect-[16/9] min-h-40 w-full rounded-2xl"
@@ -70,3 +70,4 @@ export function ContactSection() {
     </section>
   );
 }
+

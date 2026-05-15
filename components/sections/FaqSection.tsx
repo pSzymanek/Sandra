@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
-import { faqData } from "@/data/mock";
+import { faqData } from "@/data/site-content";
 
 export function FaqSection() {
   return (
@@ -30,3 +30,4 @@ export function FaqSection() {
     </section>
   );
 }
+

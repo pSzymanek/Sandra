@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-import { navItems, profileUrl } from "@/data/mock";
+import { navItems, profileUrl } from "@/data/site-content";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -92,3 +92,4 @@ export function Header() {
     </header>
   );
 }
+

@@ -30,7 +30,7 @@ export const servicesData = {
         "Spotkanie dla osób, które potrzebują rozmowy, uporządkowania trudności i dobrania dalszej formy pracy terapeutycznej.",
       price: "180 zł",
       cta: "Umów wizytę",
-      image: "/images/service-psychotherapy.png",
+      image: "/images/service-psychotherapy.jpg",
     },
     {
       title: "Poradnictwo psychologiczne",
@@ -38,7 +38,7 @@ export const servicesData = {
         "Pomagam w sytuacjach przeciążenia, kryzysu emocjonalnego, lęku, obniżonego nastroju i trudności w codziennym funkcjonowaniu.",
       price: "180 zł",
       cta: "Umów wizytę",
-      image: "/images/service-counseling.png",
+      image: "/images/service-counseling.jpg",
     },
     {
       title: "Konsultacja online",
@@ -46,7 +46,7 @@ export const servicesData = {
         "Prowadzę także konsultacje zdalne dla osób, które chcą skorzystać ze wsparcia bez wizyty w gabinecie stacjonarnym.",
       price: "Szczegóły w rezerwacji",
       cta: "Umów wizytę",
-      image: "/images/service-online.png",
+      image: "/images/service-online.jpg",
     },
   ],
 };
@@ -56,7 +56,7 @@ export const whyChooseData = {
   title: "Wsparcie w obszarach emocji, lęku i kryzysu",
   description:
     "Pracuję w obszarze konsultacji psychologicznych i psychoterapii, w tym terapii długoterminowej oraz psychoterapii młodzieży.",
-  image: "/images/support-scope.png",
+  image: "/images/support-scope.jpg",
   benefits: [
     "Zaburzenia emocjonalne, zaburzenia lękowe i kryzys emocjonalny",
     "Depresja, zaburzenia nastroju oraz bezsenność",
@@ -64,7 +64,6 @@ export const whyChooseData = {
     "Gabinet stacjonarny w Mysłowicach i konsultacje online",
   ],
   cta: "Umów wizytę",
-  phone: "Kontakt przez profil ZnanyLekarz",
 };
 
 export const aboutData = {

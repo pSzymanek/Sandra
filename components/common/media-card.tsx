@@ -1,8 +1,8 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
-interface PlaceholderImageProps {
+interface MediaCardProps {
   src: string;
   alt: string;
   className?: string;
@@ -10,7 +10,7 @@ interface PlaceholderImageProps {
   priority?: boolean;
 }
 
-export function PlaceholderImage({ src, alt, className, imageClassName, priority = false }: PlaceholderImageProps) {
+export function MediaCard({ src, alt, className, imageClassName, priority = false }: MediaCardProps) {
   return (
     <div
       className={cn(
@@ -32,3 +32,4 @@ export function PlaceholderImage({ src, alt, className, imageClassName, priority
     </div>
   );
 }
+

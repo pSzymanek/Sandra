@@ -7,7 +7,7 @@ import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { googleReviewsUrl, testimonialsData } from "@/data/mock";
+import { googleReviewsUrl, testimonialsData } from "@/data/site-content";
 
 export function TestimonialsSection() {
   return (
@@ -51,3 +51,4 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
