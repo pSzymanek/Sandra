@@ -56,6 +56,12 @@ export function Hero() {
               <p className="mt-3 max-w-md text-[clamp(0.9rem,3.2vw,1.02rem)] leading-relaxed text-foreground/82">
                 {heroData.description}
               </p>
+              <blockquote className="mt-4 border-l-2 border-accent/55 pl-4 text-[clamp(0.78rem,2.65vw,0.92rem)] leading-relaxed text-foreground/72">
+                <p>&bdquo;{heroData.quote}&rdquo;</p>
+                <footer className="mt-1 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-primary/80">
+                  {heroData.quoteAuthor}
+                </footer>
+              </blockquote>
             </div>
           </div>
 
@@ -106,6 +112,12 @@ export function Hero() {
             {heroData.title}
           </h1>
           <p className="mt-6 max-w-[33rem] text-lg text-muted-foreground">{heroData.description}</p>
+          <blockquote className="mt-7 max-w-[35rem] border-l-2 border-accent/60 pl-5 text-lg leading-relaxed text-foreground/72">
+            <p>&bdquo;{heroData.quote}&rdquo;</p>
+            <footer className="mt-2 text-sm font-medium uppercase tracking-[0.18em] text-primary/85">
+              {heroData.quoteAuthor}
+            </footer>
+          </blockquote>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="terracotta" size="lg">
               <Link href={profileUrl} target="_blank" rel="noreferrer">

@@ -14,6 +14,9 @@ export const heroData = {
   title: "Sandra Anczarska",
   description:
     "Prowadzę wsparcie psychologiczne i psychoterapeutyczne dla dorosłych oraz dzieci od 7. roku życia w gabinecie w Mysłowicach i online.",
+  quote:
+    "Pozwól, by wszystko ci się przydarzyło: piękno i groza. Po prostu idź dalej. Żadne uczucie nie jest ostateczne.",
+  quoteAuthor: "Rainer Maria Rilke",
   primaryCta: "Umów wizytę",
   secondaryCta: "Poznaj ofertę",
   image: "/images/sandra-anczarska.jpg",
@@ -70,9 +73,10 @@ export const aboutData = {
   name: "Sandra Anczarska",
   role: "Psycholog, psychoterapeutka Gestalt w procesie szkolenia",
   paragraphs: [
-    "Jestem psychologiem i psychoterapeutką Gestalt w procesie szkolenia w Warszawskiej Szkole Psychoterapii Gestalt. Ukończyłam jednolite studia magisterskie na kierunku psychologia na Uniwersytecie SWPS w Katowicach.",
-    "Doświadczenie zdobywałam między innymi w ośrodku socjoterapeutycznym, instytucjach publicznych związanych z pomocą osobom doświadczającym przemocy w rodzinie oraz w ośrodku dla osób doświadczających choroby psychicznej.",
-    "W pracy terapeutycznej ważne są dla mnie kontakt, zrozumienie i bezpieczna przestrzeń. Swoją pracę poddaję regularnej superwizji i rozwijam kompetencje przez szkolenia oraz webinary.",
+    "W swojej pracy terapeutycznej czerpię z filozofii terapii Gestalt, która opiera się na przekonaniu, że każdy człowiek posiada naturalną zdolność do rozwoju, zdrowienia i odnajdywania własnej drogi. Towarzyszę moim klientom w odkrywaniu tego, co dzieje się z nimi „tu i teraz”, wierząc, że prawdziwa zmiana zaczyna się od świadomego spotkania ze sobą.",
+    "Bliska jest mi myśl Laury Perls, współtwórczyni terapii Gestalt, że „terapia polega na odzyskiwaniu utraconych części siebie”. W bezpiecznej relacji terapeutycznej wspieram klientów w odnajdywaniu tych aspektów siebie, które zostały zagubione pod wpływem trudnych doświadczeń, oczekiwań innych ludzi czy konieczności przystosowania się do otoczenia.",
+    "Wierzę również, podobnie jak Gary Yontef, że „świadomość nie gwarantuje zmiany, ale bez świadomości zmiana jest mało prawdopodobna”. Dlatego w swojej pracy nie skupiam się wyłącznie na analizowaniu problemów, lecz na rozwijaniu świadomości emocji, potrzeb, sposobów budowania relacji oraz wzorców funkcjonowania. To właśnie świadomość pozwala klientowi dokonywać bardziej wolnych i autentycznych wyborów.",
+    "Jako terapeutka staram się być obecna, autentyczna i uważna na to, co pojawia się pomiędzy mną a klientem. Relację terapeutyczną traktuję jako przestrzeń spotkania dwóch osób, w której możliwe jest odkrywanie siebie, poszerzanie świadomości oraz budowanie większej odpowiedzialności za własne życie.",
   ],
   image: "/images/sandra-anczarska.jpg",
 };
