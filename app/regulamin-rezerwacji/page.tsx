@@ -15,7 +15,7 @@ const sections = [
   ["Potwierdzenie rezerwacji", "Po dokonaniu rezerwacji na podany adres e-mail może zostać wysłane potwierdzenie zawierające termin, typ wizyty oraz imię i nazwisko specjalisty."],
   ["Zmiana lub odwołanie terminu", "W celu zmiany lub odwołania wizyty należy skontaktować się z gabinetem z odpowiednim wyprzedzeniem."],
   ["Kontakt z gabinetem", "Kontakt w sprawach organizacyjnych odbywa się poprzez dane kontaktowe wskazane na stronie internetowej gabinetu."],
-  ["Sytuacje nagłe", "System rezerwacji nie służy do kontaktu w sytuacji bezpośredniego zagrożenia życia lub zdrowia. W nagłych przypadkach należy zadzwonić pod numer 112."],
+  ["Sytuacje nagłe", "System rezerwacji nie służy do kontaktu w sytuacji bezpośredniego zagrożenia życia lub zdrowia. W nagłych przypadkach należy zadzwonić pod numer 116 123."],
 ];
 
 export default function TermsPage() {
@@ -38,3 +38,4 @@ export default function TermsPage() {
     </div>
   );
 }
+

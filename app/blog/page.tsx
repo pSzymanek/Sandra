@@ -8,11 +8,11 @@ import { getArticles } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Teksty o emocjach, trudnościach i drodze do lepszego kontaktu ze sobą.",
+  description: "O emocjach, przeżyciach i drodze do lepszego kontaktu ze sobą.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog | Sandra Anczarska",
-    description: "Teksty o emocjach, trudnościach i drodze do lepszego kontaktu ze sobą.",
+    description: "O emocjach, przeżyciach i drodze do lepszego kontaktu ze sobą.",
     url: "/blog",
     images: ["/images/sandra-anczarska.jpg"],
   },
@@ -31,7 +31,7 @@ export default async function BlogPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-primary/85">Blog</p>
             <h1 className="font-display text-5xl leading-tight text-foreground md:text-7xl">Blog</h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Teksty o emocjach, trudnościach i drodze do lepszego kontaktu ze sobą.
+              O emocjach, przeżyciach i drodze do lepszego kontaktu ze sobą.
             </p>
           </div>
         </section>
@@ -48,4 +48,5 @@ export default async function BlogPage() {
     </div>
   );
 }
+
 

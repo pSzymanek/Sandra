@@ -228,10 +228,11 @@ export function BookingForm() {
       ) : null}
 
       <p className="mt-8 rounded-2xl border border-border/70 bg-background/70 p-4 text-sm leading-relaxed text-muted-foreground">
-        System rezerwacji nie służy do kontaktu w sytuacji bezpośredniego zagrożenia życia lub zdrowia. W nagłych przypadkach zadzwoń pod numer 112.
+        System rezerwacji nie służy do kontaktu w sytuacji bezpośredniego zagrożenia życia lub zdrowia. W nagłych przypadkach zadzwoń pod numer 116 123.
       </p>
     </div>
   );
 }
+
 
 

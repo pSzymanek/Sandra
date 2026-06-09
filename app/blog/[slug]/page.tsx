@@ -133,7 +133,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </section>
 
             <aside className="mt-8 rounded-[1.5rem] border border-primary/20 bg-primary/8 p-5 text-sm leading-relaxed text-foreground/72">
-              Treści na stronie mają charakter edukacyjny i nie zastępują konsultacji ze specjalistą. Jeśli jesteś w bezpośrednim zagrożeniu życia lub zdrowia, zadzwoń pod numer 112.
+              Treści na stronie mają charakter edukacyjny i nie zastępują konsultacji ze specjalistą. Jeśli jesteś w bezpośrednim zagrożeniu życia lub zdrowia, zadzwoń pod numer 116 123.
             </aside>
           </div>
         </article>
@@ -142,4 +142,5 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     </div>
   );
 }
+
 
