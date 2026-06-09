@@ -8,7 +8,7 @@ import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { profileUrl, servicesData } from "@/data/site-content";
+import { servicesData } from "@/data/site-content";
 
 export function ServicesSection() {
   return (
@@ -25,7 +25,7 @@ export function ServicesSection() {
               className="[&_h2]:text-[#f6f2e9] [&_p]:text-[#dbe8db]"
             />
             <Button asChild variant="terracotta" size="lg" className="mt-7 border border-white/25">
-              <Link href={profileUrl} target="_blank" rel="noreferrer">
+              <Link href="/rezerwacja">
                 Umów wizytę
               </Link>
             </Button>
@@ -51,7 +51,7 @@ export function ServicesSection() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <Button asChild variant="outline" className="w-full justify-center">
-                      <Link href={profileUrl} target="_blank" rel="noreferrer">
+                      <Link href="/rezerwacja">
                         {service.cta}
                       </Link>
                     </Button>
@@ -65,4 +65,5 @@ export function ServicesSection() {
     </section>
   );
 }
+
 

@@ -136,7 +136,10 @@ export function FloatingActions() {
         transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed bottom-4 right-5 z-30 hidden lg:block"
       >
-        <div className={cn(showSocials ? "pointer-events-auto" : "pointer-events-none")}>
+        <div className={cn("flex flex-col gap-2.5", showSocials ? "pointer-events-auto" : "pointer-events-none")}>
+          <CircleButton label="Kontakt" href="#kontakt" className="border-white/40 bg-[#6f8879]">
+            <Phone className="h-6 w-6" />
+          </CircleButton>
           <ScrollTopButton className="border-white/40 bg-[#2f4350]" />
         </div>
       </motion.div>

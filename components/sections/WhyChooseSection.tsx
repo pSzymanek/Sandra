@@ -6,7 +6,7 @@ import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { profileUrl, whyChooseData } from "@/data/site-content";
+import { whyChooseData } from "@/data/site-content";
 
 export function WhyChooseSection() {
   return (
@@ -37,7 +37,7 @@ export function WhyChooseSection() {
 
             <div className="mt-8">
               <Button asChild variant="terracotta">
-                <Link href={profileUrl} target="_blank" rel="noreferrer">
+                <Link href="/rezerwacja">
                   {whyChooseData.cta}
                 </Link>
               </Button>
@@ -48,4 +48,5 @@ export function WhyChooseSection() {
     </section>
   );
 }
+
 

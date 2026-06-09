@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-import { navItems, profileUrl } from "@/data/site-content";
+import { navItems } from "@/data/site-content";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -19,7 +19,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/88 backdrop-blur-xl">
       <div className="container flex h-24 items-center justify-between lg:h-24 lg:gap-8">
-        <Link href="#top" className="pr-3 font-display text-foreground lg:pr-0">
+        <Link href="/#top" className="pr-3 font-display text-foreground lg:pr-0">
           <span className="block leading-none">
             <span className="block whitespace-nowrap text-[1.68rem] sm:text-[1.9rem] md:text-[2.05rem] lg:text-[2.15rem]">
               Sandra Anczarska
@@ -44,7 +44,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button asChild variant="terracotta">
-            <Link href={profileUrl} target="_blank" rel="noreferrer">
+            <Link href="/rezerwacja">
               Umów wizytę
             </Link>
           </Button>
@@ -81,7 +81,7 @@ export function Header() {
             </nav>
             <SheetClose asChild>
               <Button asChild variant="terracotta" className="mt-10 h-14 w-full rounded-2xl text-xl font-display font-normal">
-                <Link href={profileUrl} target="_blank" rel="noreferrer">
+                <Link href="/rezerwacja">
                   Umów wizytę
                 </Link>
               </Button>
@@ -92,4 +92,5 @@ export function Header() {
     </header>
   );
 }
+
 

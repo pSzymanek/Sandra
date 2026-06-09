@@ -17,13 +17,16 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
     "lucide-react": "^0.462.0",
+    "mysql2": "^3.22.5",
     "next": "^14.2.25",
+    "nodemailer": "^8.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
+    "@types/nodemailer": "^8.0.0",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",

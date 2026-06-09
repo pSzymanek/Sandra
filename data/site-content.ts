@@ -2,11 +2,12 @@
 export const googleReviewsUrl = "https://share.google/nraI5njoL6QQzdYJY";
 
 export const navItems = [
-  { label: "Oferta", href: "#oferta" },
-  { label: "O mnie", href: "#o-mnie" },
-  { label: "Zakres pomocy", href: "#zakres-pomocy" },
-  { label: "Opinie", href: "#opinie" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Oferta", href: "/#oferta" },
+  { label: "O mnie", href: "/#o-mnie" },
+  { label: "Zakres pomocy", href: "/#zakres-pomocy" },
+  { label: "Opinie", href: "/#opinie" },
+  { label: "Blog", href: "/blog" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export const heroData = {
@@ -15,7 +16,7 @@ export const heroData = {
   description:
     "Prowadzę wsparcie psychologiczne i psychoterapeutyczne dla dorosłych oraz dzieci od 7. roku życia w gabinecie w Mysłowicach i online.",
   quote:
-    "Pozwól, by wszystko ci się przydarzyło: piękno i groza. Po prostu idź dalej. Żadne uczucie nie jest ostateczne.",
+    "Pozwól, by wszystko ci się przydarzyło: piękno i groza.\nPo prostu idź dalej. Żadne uczucie nie jest ostateczne.",
   quoteAuthor: "Rainer Maria Rilke",
   primaryCta: "Umów wizytę",
   secondaryCta: "Poznaj ofertę",
@@ -110,7 +111,7 @@ export const faqData = {
     },
     {
       question: "Ile kosztuje konsultacja?",
-      answer: "Aktualny cennik wizyt jest dostępny na stronie znanylekarz.pl.",
+      answer: "Aktualny cennik wizyt jest dostępny podczas rezerwacji lub po kontakcie z gabinetem.",
     },
   ],
 };
@@ -119,7 +120,7 @@ export const contactData = {
   eyebrow: "Kontakt",
   title: "Sprawdź najbliższe terminy oraz umów wizytę",
   description:
-    "Aktualne terminy, ceny i szczegóły rezerwacji sprawdzisz na znanylekarz.pl.",
+    "Aktualne terminy, ceny i szczegóły rezerwacji sprawdzisz w systemie rezerwacji.",
   details: [
     { label: "Gabinet", value: "Gabinet Psychologiczny i Psychoterapii Sandra Anczarska" },
     { label: "Adres", value: "Wojska Polskiego 3, 41-400 Mysłowice" },
@@ -128,14 +129,15 @@ export const contactData = {
   ],
   bookingTitle: "Umów wizytę",
   bookingDescription:
-    "Skorzystaj z serwisu ZnanyLekarz, żeby sprawdzić dostępne terminy i wybrać dogodną formę wizyty.",
+    "Skorzystaj z systemu rezerwacji, żeby sprawdzić dostępne terminy i wybrać dogodną formę wizyty.",
   bookingCta: "Umów wizytę",
 };
 
 export const footerData = {
   copy: "Prowadzę psychoterapię i wsparcie psychologiczne w Mysłowicach oraz online.",
-  contact: ["Wojska Polskiego 3, 41-400 Mysłowice", "Konsultacje online", "Rezerwacja przez ZnanyLekarz"],
+  contact: ["Wojska Polskiego 3, 41-400 Mysłowice", "Konsultacje online", "Rezerwacja online"],
   socials: ["Instagram", "Facebook", "ZnanyLekarz"],
 };
+
 
 

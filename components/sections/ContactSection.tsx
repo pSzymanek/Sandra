@@ -1,11 +1,12 @@
 ﻿"use client";
 
+import Link from "next/link";
 import { CalendarCheck, MapPin, Monitor, UserRound } from "lucide-react";
 
 import { MediaCard } from "@/components/common/media-card";
 import { Reveal } from "@/components/common/reveal";
 import { SectionHeading } from "@/components/common/section-heading";
-import { ZnanyLekarzWidget } from "@/components/common/ZnanyLekarzWidget";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { contactData } from "@/data/site-content";
 
@@ -60,7 +61,7 @@ export function ContactSection() {
                 <p className="mt-5 max-w-xl text-muted-foreground">{contactData.bookingDescription}</p>
 
                 <div className="mt-8 max-w-xl">
-                  <ZnanyLekarzWidget className="inline-flex min-h-12 w-full items-center justify-center rounded-2xl bg-accent px-6 py-3 text-center text-base font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:brightness-95 md:w-auto" />
+                  <Button asChild variant="terracotta" size="lg" className="w-full rounded-2xl md:w-auto"><Link href="/rezerwacja">{contactData.bookingCta}</Link></Button>
                 </div>
               </div>
             </Card>
@@ -70,4 +71,6 @@ export function ContactSection() {
     </section>
   );
 }
+
+
 
